@@ -1,6 +1,3 @@
 #!/usr/bin/python3
 number = 3.14159
-num = round(number, 2)
-print(f'Float: {num}')
-
-#TASK 4
+print(f'Float: {number:0.2f}')
