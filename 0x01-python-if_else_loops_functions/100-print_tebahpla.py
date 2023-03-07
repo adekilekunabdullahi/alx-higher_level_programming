@@ -6,5 +6,6 @@ def reverse_alphabet():
         else:
             print("{}".format(chr(x - 32)), end="")
 
+
 reverse_alphabet()
 
