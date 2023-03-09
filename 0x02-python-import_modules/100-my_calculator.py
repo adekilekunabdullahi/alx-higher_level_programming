@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
 from sys import argv, exit
+
+
 def main():
     a = int(argv[1])
     sign = argv[2]
@@ -18,5 +20,8 @@ def main():
             if sign == key:
                 sums = array[key]
         print(f"{a} {sign} {b} = {sums}")
+    return 0
+
+
 if __name__ == "__main__":
     main()
