@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+import hidden_4
 if __name__ == "__main__":
-    print("my_secret_santa")
-    print("print_hidden")
-    print("print_school")
+    a = dir(hidden_4)
+    for x in sorted(a):
+        if x[0] != '_':
+            print(x)
