@@ -1,5 +1,13 @@
 #!/bin/python3
+"""
+A module that contains class declaration
+"""
+
+
 class Rectangle:
+    """
+    class Rectangle implementation
+    """
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
@@ -7,6 +15,7 @@ class Rectangle:
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, value):
         if type(value) != int:
@@ -17,6 +26,7 @@ class Rectangle:
 
     def getter(self):
         return self.__height
+
     def setter(self, value):
         if type(value) != int:
             raise TypeError("height must be an integer")
