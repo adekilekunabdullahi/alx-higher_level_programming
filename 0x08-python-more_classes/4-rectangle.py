@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """
 A module that contains class declaration
 """
@@ -63,7 +63,7 @@ class Rectangle:
             perimeters = 0
         return perimeters
 
-    def __str__(self):
+    def __repr__(self):
         """
         str implementation
         """
