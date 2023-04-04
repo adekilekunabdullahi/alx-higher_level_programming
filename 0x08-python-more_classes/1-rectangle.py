@@ -30,13 +30,15 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    def getter(self):
+    @property
+    def height(self):
         """
         height parametter getter function
         """
         return self.__height
 
-    def setter(self, value):
+    @height.setter
+    def height(self, value):
         """
         height parametter setter function
         """
@@ -45,4 +47,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-    height = property(getter, setter,)
