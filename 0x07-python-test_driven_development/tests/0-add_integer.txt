@@ -1,0 +1,23 @@
+>>> import sys
+>>> sys.path.append('../0x07-python-test_driven_development')
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(2,4)
+6
+>>> add_integer(2.0,4.0)
+6
+>>> add_integer(2.6, 4)
+6
+>>> add_integer(2,4.0)
+6
+>>> add_integer('ab',2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(3,'a2')
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer(None , 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
