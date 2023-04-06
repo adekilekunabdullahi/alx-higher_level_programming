@@ -1,6 +1,10 @@
 >>> matrix_added = __import__('2-matrix_divided').matrix_divided
 >>> matrix_added([[2,4,6], [6,8,10]], 2)
 [[1.0, 2.0, 3.0], [3.0, 4.0, 5.0]]
+>>> matrix_added([[2,4], [2,4,6]], None)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
 >>> matrix_added([[2,4], [2,4,6]], 2)
 Traceback (most recent call last):
 ...
@@ -21,6 +25,10 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 ...
 TypeError: div must be a number
+>>> matrix_added([[20, 40], [60, 80]], (-2.0e+309))
+[[2.0, 4.0], [6.0, 8.0]]
+>>> matrix_added([[20, 40], [60, 80]], float('nan'))
+[[2.0, 4.0], [6.0, 8.0]]
 >>> matrix_added([[2,4], [6,8]], 0)
 Traceback (most recent call last):
 ...
