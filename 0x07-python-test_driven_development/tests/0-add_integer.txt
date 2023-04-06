@@ -1,10 +1,13 @@
->>> import sys
->>> sys.path.append('../0x07-python-test_driven_development')
 >>> add_integer = __import__('0-add_integer').add_integer
 >>> add_integer(2,4)
 6
 >>> add_integer(2.0,4.0)
 6
+>>> add_integer(2.0e+309,24)
+98
+>>> x = float('nan')
+>>> add_integer(x,24)
+122
 >>> add_integer(2.6, 4)
 6
 >>> add_integer(2,4.0)
