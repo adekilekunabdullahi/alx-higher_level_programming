@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-import json
 """Doc"""
+import json
 
 
 def from_json_string(my_str):
