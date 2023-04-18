@@ -2,6 +2,7 @@
 """Python sc"""
 from . import rectangle
 
+
 class Square(rectangle.Rectangle):
     """Doc"""
     def __init__(self, size, x=0, y=0, id=None):
@@ -32,7 +33,7 @@ class Square(rectangle.Rectangle):
                     self.x = arg
                 elif a == 3:
                     self.y = arg
-                a+=1
+                a += 1
         else:
             for k, v in kwargs.items():
                 if k == 'id':
@@ -44,12 +45,13 @@ class Square(rectangle.Rectangle):
                     self.x = v
                 elif k == 'y':
                     self.y = v
+
     def __str__(self):
         """Doc"""
-        return (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
+        return (f"[Square] ({self.id}) \
+{self.x}/{self.y} - {self.width}")
 
     def to_dictionary(self):
         """Doc"""
-        dicts = {'x':self.x, 'y':self.y, 'id':self.id, 'size':self.height}
+        dicts = {'x': self.x, 'y': self.y, 'id': self.id, 'size': self.height}
         return dicts
-

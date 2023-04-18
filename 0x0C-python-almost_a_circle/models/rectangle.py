@@ -2,6 +2,7 @@
 """Doc"""
 from . import base
 
+
 class Rectangle(base.Base):
     """Doc"""
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -25,7 +26,7 @@ class Rectangle(base.Base):
         if width <= 0:
             raise ValueError("width must be > 0")
         self.__width = width
-    
+
     @property
     def height(self):
         """ height getter"""
@@ -89,7 +90,8 @@ class Rectangle(base.Base):
 
     def __str__(self):
         """Doc"""
-        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+        return (f"[Rectangle] ({self.id}) \
+{self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """DOC"""
@@ -122,5 +124,11 @@ class Rectangle(base.Base):
 
     def to_dictionary(self):
         """DOC"""
-        dicts = {'x':self.__x, 'y':self.y, 'id':self.id, 'height':self.height, 'width':self.width}
+        dicts = {
+                'x': self.__x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width
+                }
         return dicts

@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """Base Module"""
 import json
+
+
 class Base:
     """Base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """init function"""
         if id:
@@ -29,10 +32,7 @@ class Base:
                 f.write("[]")
                 f.close()
         else:
-        
-                json_list = Base.to_json_string(x)
-                f = open(f"{cls.__name__}.json", 'w')
-                f.write(json_list)
-                f.close()
-
-
+            json_list = Base.to_json_string(x)
+            f = open(f"{cls.__name__}.json", 'w')
+            f.write(json_list)
+            f.close()
