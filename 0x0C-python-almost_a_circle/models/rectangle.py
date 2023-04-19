@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-"""Doc"""
+"""      Doc
+A python module that
+implement a class rectangle
+
+
+"""
+
 from . import base
 
 
