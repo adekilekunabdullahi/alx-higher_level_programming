@@ -9,7 +9,7 @@ from models.base import Base
 class Rectangle(Base):
     """rectangle class implementation"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Doc"""
+        """init function"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -18,11 +18,13 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """Doc"""
+        """function width
+        args: private width"""
         return self.__width
 
     @width.setter
     def width(self, width):
+        """ a width implementation """
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -60,7 +62,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """ y getter """
+        """ y function getter """
         return self.__y
 
     @y.setter
@@ -74,11 +76,11 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
-        """DOC"""
+        """function area"""
         return self.__width * self.__height
 
     def display(self):
-        """Doc"""
+        """Function Display"""
         for i in range(self.__y):
             print()
         for x in range(self.__height):
@@ -91,12 +93,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        """Doc"""
+        """function __str__"""
         return (f"[Rectangle] ({self.id}) \
 {self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
-        """DOC"""
+        """function updqtes"""
         if args and len(args) != 0:
             a = 0
             for arg in args:
