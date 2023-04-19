@@ -1,16 +1,13 @@
 #!/usr/bin/python3
-"""      Doc
+"""
 A python module that
 implement a class rectangle
-
-
 """
+from models.base import Base
 
-from . import base
 
-
-class Rectangle(base.Base):
-    """Doc"""
+class Rectangle(Base):
+    """rectangle class implementation"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Doc"""
         super().__init__(id)
@@ -26,7 +23,6 @@ class Rectangle(base.Base):
 
     @width.setter
     def width(self, width):
-        """ width setter """
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
