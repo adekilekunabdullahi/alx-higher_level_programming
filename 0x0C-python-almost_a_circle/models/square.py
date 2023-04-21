@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """Python sc"""
-from . import rectangle
+from models import rectangle
 
 
 class Square(rectangle.Rectangle):
     """Doc"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """Doc"""
         super().__init__(size, size, x, y, id)
