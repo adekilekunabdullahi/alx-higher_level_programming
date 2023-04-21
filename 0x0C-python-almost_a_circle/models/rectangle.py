@@ -8,6 +8,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """rectangle class implementation"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """init function"""
         super().__init__(id)
@@ -18,18 +19,17 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """function width
-        args: private width"""
+        """function width"""
         return self.__width
 
     @width.setter
-    def width(self, width):
-        """ a width implementation """
-        if type(width) is not int:
+    def width(self, value):
+        """ a width setter"""
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        if width <= 0:
+        if value <= 0:
             raise ValueError("width must be > 0")
-        self.__width = width
+        self.__width = value
 
     @property
     def height(self):
@@ -37,13 +37,13 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self, height):
+    def height(self, value):
         """ height setter """
-        if type(height) is not int:
+        if type(value) is not int:
             raise TypeError("height must be an integer")
-        if height <= 0:
+        if value <= 0:
             raise ValueError("height must be > 0")
-        self.__height = height
+        self.__height = value
 
     @property
     def x(self):
@@ -127,7 +127,7 @@ class Rectangle(Base):
                     self.y = v
 
     def to_dictionary(self):
-        """DOC"""
+        """to_dictionary is a class that implement dictionary"""
         dicts = {
                 'x': self.__x,
                 'y': self.y,
