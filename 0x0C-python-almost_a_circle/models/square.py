@@ -1,28 +1,28 @@
 #!/usr/bin/python3
-"""Python sc"""
+"""square class implementation"""
 from models import rectangle
 
 
 class Square(rectangle.Rectangle):
-    """Doc"""
+    """Class square is inheriting from rectangle"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Doc"""
+        """starter init function"""
         super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """Doc"""
+        """size getter function"""
         return self.width
 
     @size.setter
     def size(self, value):
-        """Doc"""
+        """size setter function"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Doc"""
+        """instance method function"""
         if args and len(args) != 0:
             a = 0
             for arg in args:
@@ -48,11 +48,11 @@ class Square(rectangle.Rectangle):
                     self.y = v
 
     def __str__(self):
-        """Doc"""
+        """str representation of the class"""
         return (f"[Square] ({self.id}) \
 {self.x}/{self.y} - {self.width}")
 
     def to_dictionary(self):
-        """Doc"""
+        """convert to dictionary method"""
         dicts = {'x': self.x, 'y': self.y, 'id': self.id, 'size': self.height}
         return dicts
