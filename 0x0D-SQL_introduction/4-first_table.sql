@@ -1,8 +1,6 @@
 -- script to create a table
--- create database
--- CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
 -- code to use
-CREATE TABLE IF NOT EXISTS first_table (
-	id INT,
-	name VARCHAR(256)
-);
+SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_DEFAULT, COLUMN_COMMENT
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'first_table';
+
