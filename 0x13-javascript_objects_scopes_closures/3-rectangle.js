@@ -1,14 +1,11 @@
+#!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    if (w <= 0 || h <= 0) {
-      this.width = undefined;
-      this.height = undefined;
-    } else {
+    if ((Number.isInteger(w) && w > 0) && (Number.isInteger(h) && h > 0)) {
       this.width = w;
       this.height = h;
     }
   }
-
   print () {
     for (let a = 0; a < this.height; a++) {
       let rec = '';
