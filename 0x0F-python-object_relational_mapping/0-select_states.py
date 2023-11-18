@@ -16,7 +16,7 @@ def list_states(username, password, database):
     # Create a cursor object to interact with the database
     cursor = db.cursor()
 
-    query = "SELECT * FROM states ORDER BY states.id ASC"
+    query = "SELECT * FROM states ORDER BY id ASC"
     cursor.execute(query)
 
     # Fetch all the rows
@@ -32,12 +32,6 @@ def list_states(username, password, database):
 
 
 if __name__ == "__main__":
-    # Check if all three arguments are provided
-    if len(sys.argv) != 4:
-        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
-        sys.exit(1)
-
-    # Extract username, password, and database from command line arguments
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
     # Call the function to list states
