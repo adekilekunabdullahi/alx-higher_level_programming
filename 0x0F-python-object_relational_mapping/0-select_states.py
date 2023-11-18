@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+'''Script to get all states'''
 import MySQLdb
 import sys
 
 
 def list_states(username, password, database):
-    # Connect to the MySQL server
+    '''Connect to the MySQL server and fetch records'''
     db = MySQLdb.connect(
             host="localhost",
             port=3306,
