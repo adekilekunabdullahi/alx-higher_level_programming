@@ -2,14 +2,20 @@
 import MySQLdb
 import sys
 
+
 def list_states(username, password, database):
     # Connect to the MySQL server
-    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+    db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database
+            )
 
     # Create a cursor object to interact with the database
     cursor = db.cursor()
 
-    # Execute the SQL query to retrieve states in ascending order by states.id
     query = "SELECT * FROM states ORDER BY states.id ASC"
     cursor.execute(query)
 
@@ -24,6 +30,7 @@ def list_states(username, password, database):
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
     # Check if all three arguments are provided
     if len(sys.argv) != 4:
@@ -35,4 +42,3 @@ if __name__ == "__main__":
 
     # Call the function to list states
     list_states(username, password, database)
-
