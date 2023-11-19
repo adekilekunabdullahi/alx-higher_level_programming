@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Filter states by user input"""
+"""Prevent SQL injection"""
 import MySQLdb
 from sys import argv
 
@@ -12,10 +12,9 @@ if __name__ == '__main__':
         passwd=argv[2],
         db=argv[3]
     )
-    query = 'SELECT * FROM states WHERE BINARY name="{}" ORDER \
-        BY id'.format(argv[4])
     cursorDb = connection.cursor()
-    cursorDb.execute(query)
+    cursorDb.execute('SELECT * FROM states WHERE name LIKE \
+                     BINARY %(name)s ORDER BY id', {'name': argv[4]})
     for row in cursorDb.fetchall():
         print(row)
     cursorDb.close()
